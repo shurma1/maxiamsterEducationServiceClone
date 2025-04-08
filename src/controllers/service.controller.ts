@@ -22,6 +22,16 @@ class ServiceController {
 			next(error)
 		}
 	}
+	
+	async getCities(req: Request, res: Response, next: NextFunction) {
+		try {
+			const cities = await ServiceService.getCities();
+			res.json(cities);
+			
+		} catch (error) {
+			next(error)
+		}
+	}
 }
 
 export default new ServiceController();

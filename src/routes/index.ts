@@ -6,5 +6,6 @@ const router = express.Router();
 
 router.get('/products', ServiceController.getProducts);
 router.get('/cpu', ServiceController.getCPULoad);
+router.get('/city', ServiceController.getCities);
 
 export default router;
