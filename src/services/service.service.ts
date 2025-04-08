@@ -21,7 +21,9 @@ class ServiceService {
 	}
 	
 	public async getCities() {
-		return SyntheticDataService.loadSyntheticJSON('city');
+		const rates =  await SyntheticDataService.loadSyntheticJSON<IRates>('rates');
+		
+		return Object.keys(rates)
 	}
 	
 	public async calcDeliveryPrice(city: string, weight: number) {
