@@ -17,7 +17,7 @@ class ServiceController {
 	async getCPULoad(req: Request, res: Response, next: NextFunction) {
 		try {
 			const cpuLoad = await ServiceService.getCPULoad();
-			res.send(cpuLoad);
+			res.json(cpuLoad);
 			
 		} catch (error) {
 			next(error)
