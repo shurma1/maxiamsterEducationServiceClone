@@ -12,6 +12,16 @@ class ServiceController {
 			next(error)
 		}
 	}
+	
+	async getCPULoad(req: Request, res: Response, next: NextFunction) {
+		try {
+			const cpuLoad = await ServiceService.getCPULoad();
+			res.send(cpuLoad);
+			
+		} catch (error) {
+			next(error)
+		}
+	}
 }
 
 export default new ServiceController();
