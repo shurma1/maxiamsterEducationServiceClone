@@ -43,7 +43,7 @@ class ServiceController {
 			
 			
 			const weightNumber = parseInt(weight as string);
-			console.log(weightNumber, weight)
+
 			if(isNaN(weightNumber)) {
 				throw ApiError.errorByType('INVALID_WEIGHT');
 			}
