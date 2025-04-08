@@ -1,0 +1,20 @@
+{
+  "Волгоград": { "basePrice": 310, "pricePerKg": 31 },
+  "Воронеж": { "basePrice": 320, "pricePerKg": 32 },
+  "Екатеринбург": { "basePrice": 380, "pricePerKg": 38 },
+  "Казань": { "basePrice": 350, "pricePerKg": 35 },
+  "Калуга": { "basePrice": 300, "pricePerKg": 30 },
+  "Красноярск": { "basePrice": 420, "pricePerKg": 42 },
+  "Москва": { "basePrice": 500, "pricePerKg": 30 },
+  "Нижний Новгород": { "basePrice": 350, "pricePerKg": 35 },
+  "Новосибирск": { "basePrice": 400, "pricePerKg": 40 },
+  "Омск": { "basePrice": 390, "pricePerKg": 39 },
+  "Орел": { "basePrice": 300, "pricePerKg": 30 },
+  "Пермь": { "basePrice": 330, "pricePerKg": 33 },
+  "Ростов-на-Дону": { "basePrice": 360, "pricePerKg": 36 },
+  "Самара": { "basePrice": 340, "pricePerKg": 34 },
+  "Санкт-Петербург": { "basePrice": 450, "pricePerKg": 35 },
+  "Тула": { "basePrice": 290, "pricePerKg": 29 },
+  "Уфа": { "basePrice": 340, "pricePerKg": 34 },
+  "Челябинск": { "basePrice": 370, "pricePerKg": 37 }
+}

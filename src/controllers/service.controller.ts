@@ -1,5 +1,6 @@
 import {NextFunction, Request, Response} from 'express';
 import ServiceService from "../services/service.service";
+import {ApiError} from "../error/apiError";
 
 
 class ServiceController {
@@ -27,6 +28,28 @@ class ServiceController {
 		try {
 			const cities = await ServiceService.getCities();
 			res.json(cities);
+			
+		} catch (error) {
+			next(error)
+		}
+	}
+	
+	async getDeliveryPrice(req: Request, res: Response, next: NextFunction) {
+		try {
+			let {
+				city,
+				weight
+			} = req.query;
+			
+			
+			const weightNumber = parseInt(weight as string);
+			console.log(weightNumber, weight)
+			if(isNaN(weightNumber)) {
+				throw ApiError.errorByType('INVALID_WEIGHT');
+			}
+			
+			const deliveryRate = await ServiceService.calcDeliveryPrice(city as string, weightNumber);
+			res.json(deliveryRate);
 			
 		} catch (error) {
 			next(error)
